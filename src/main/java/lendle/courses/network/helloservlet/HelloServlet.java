@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author lendle
  */
-@WebServlet(name = "HelloServlet", urlPatterns = {"/"})
+@WebServlet(name = "HelloServlet", urlPatterns = {"/Hello"})
 public class HelloServlet extends HttpServlet {
 
     @Override
@@ -30,6 +30,13 @@ public class HelloServlet extends HttpServlet {
             //  <h1>Hello!</h1>
             // </body>
             // </html>
+            out.println("<html>");
+            out.println("<body>");
+            out.println("<h1>Hello!</h1>");
+            out.println(req.getRequestURI());
+            out.println("</body>");
+            out.println("</html>");
+
         }
     }
     
